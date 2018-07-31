@@ -1,22 +1,25 @@
 // BEGIN (write your solution here)
 const solution = (d, a, b) => {
   
-  const rad = n => Math.PI / 180 * n; // перевод в рад
+  const rad = n => Math.PI / 180 * n; // функция для перевода градусов в радианы
   
-  const c = Math.sin(rad(180 - a - b));
-  a = Math.sin(rad(a));
- // console.log(a);
-  b = Math.sin(rad(b));
- //  console.log(b);
-  //const c = Math.PI - (a + b);
+  const c = Math.sin(rad(180 - a - b)); // находим значение противолежащего угла. Внимание - порядок вычислений важен!
+                                        // сначала 180 - 60 - 60 = 60. Затем передал функции и перевел в радианы. Вычислили sin
+  a = Math.sin(rad(a));                 // перевод в радианы и получение значения sin
+  //console.log(a);
+ 
+  b = Math.sin(rad(b));                 // перевод в радианы и получение значения sin
+  //console.log(b);
+ 
   //console.log(c);
-  d = Math.pow(d, 2) / 2; // готовое значение стороны  
   
-  return d * ((a * b) / c);
+  d = Math.pow(d, 2) / 2;               // получаем готовое значение стороны  
+  
+  return d * ((a * b) / c);             // работаем с готовыми полученными значениями
   
 };
 
-export default solution;
+export default solution;                // экспорт по умолчанию
 
 // END
 
