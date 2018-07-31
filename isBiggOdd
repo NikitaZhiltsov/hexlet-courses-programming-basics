@@ -1,0 +1,4 @@
+// BEGIN (write your solution here)
+const isBigOdd = n => n >= 1001 && n%2 !== 0;
+export default isBigOdd;
+// END
