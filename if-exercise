@@ -1,0 +1,38 @@
+// BEGIN (write your solution here)
+
+const check = (a, b, c, d) => {
+      if (a === c && b === d) {
+          return 2;
+      }
+       else if ((a > b && c > d) || (a < b && c < d) ||  (a === b && c === d)) {
+        return 1;
+      }
+      else {
+            return 0;
+          }
+}
+console.log(check(0, 2, 0, 4));
+console.log(check(0, 2, 0, 2));
+console.log(check(1, 2, 5, 4));
+console.log(check(1, 2, 5, 5));
+
+export default check;
+
+/* Эскиз программы:
+четыре параметра: 
+a : b - реальный счет
+с : d - ставка
+
+если счет угадан верно, то 2,
+
+если исход угадан верно, то 1,
+
+во всех остальных случаях 0.
+
+счет верный:  a = c && b = d
+
+исход верный: a > b && c > d || a < b && c < d ||  a == b && c == d
+
+все остальные случаи */
+
+// END
