@@ -1,0 +1,20 @@
+const sequenceSum = (begin, end) => {
+  // BEGIN (write your solution here)
+  if (begin === end) {
+    return end;
+  };
+  if (begin > end) {
+    return NaN;
+  };
+
+  return begin + sequenceSum(begin + 1, end);
+  // END
+};
+
+export default sequenceSum;
+
+//Предварительный эскиз
+//return begin + sequenceSum(begin + 1);
+// терминалка главная: if begin = end return end
+// if begin > end  return Nan
+// if begin === end return begin
