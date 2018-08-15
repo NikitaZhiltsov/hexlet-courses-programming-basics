@@ -1,0 +1,19 @@
+// BEGIN (write your solution here)
+const smallestDivisor = (num) => {
+  if (num <= 0) {
+    return NaN;
+  }
+  if (num === 1) {
+    return num;
+  }
+
+  let div = 2;
+
+  while (num % div !== 0) {
+    div = div + 1;
+  }
+  return div;
+};
+
+export default smallestDivisor;
+// END
