@@ -1,0 +1,32 @@
+//FIRST
+// BEGIN (write your solution here) 
+const gcd = (a, b) => {
+  let del;
+  while (b !== 0) {
+    del = b; // 40 30 10
+    b = a % b; // 30 10 0
+    a = del; // 40 30 10
+  }
+  return a; // 10
+
+  // gcd(30, 40);
+};
+
+export default gcd;
+// END
+
+
+//SECOND
+// BEGIN (write your solution here)
+const gcd = (a, b) => {
+
+let del = b;
+
+while (a % del !== 0 || b % del !== 0) {
+  del = del - 1;
+}
+return del;
+};
+
+export default gcd;
+// END
