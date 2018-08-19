@@ -1,0 +1,23 @@
+const isPrime = (n) => {
+if (n <= 1) {
+  return false;
+}
+
+if (n === 2 || n === 3) {
+  return true;
+}
+
+if (n % 2 === 0) {
+  return false;
+}
+
+let counter = n - 1;
+while (counter > 2) {
+  counter = counter - 1;
+  if (n % counter === 0) {
+  return false;
+  }
+}
+return true;
+};
+
